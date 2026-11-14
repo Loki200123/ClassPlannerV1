@@ -1,0 +1,19 @@
+{
+  "name": "class-planner",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --import tsx --test \"src/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit",
+    "parse-audit": "tsx scripts/parse-audit.ts",
+    "plan": "tsx scripts/plan.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "pdfjs-dist": "^6.5.438"
+  }
+}

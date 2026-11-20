@@ -40,6 +40,10 @@ export function itemsToLines(items: PdfTextItem[]): string[] {
 /** Extract every page's lines. Works in Node and modern browsers. */
 export async function extractPdfLines(data: Uint8Array): Promise<string[]> {
   const pdfjs = await import('pdfjs-dist/legacy/build/pdf.mjs');
+  if (typeof window !== 'undefined' && !pdfjs.GlobalWorkerOptions.workerSrc) {
+    // copied into public/ by scripts/copy-pdf-worker.mjs
+    pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs';
+  }
   // verbosity 0: font warnings don't matter, we only read text
   const task = pdfjs.getDocument({ data, verbosity: 0 });
   const doc = await task.promise;

@@ -123,6 +123,8 @@ export interface AgreementGroup {
   rule: GroupRule;
   articulations: Articulation[];
   note?: string;
+  /** Recommended, not required (e.g. "Additional lower division courses" with no rule). */
+  optional?: boolean;
 }
 
 export interface TransferAgreement {

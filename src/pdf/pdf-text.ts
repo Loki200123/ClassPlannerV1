@@ -37,13 +37,54 @@ export function itemsToLines(items: PdfTextItem[]): string[] {
   });
 }
 
-/** Extract every page's lines. Works in Node and modern browsers. */
-export async function extractPdfLines(data: Uint8Array): Promise<string[]> {
+/** One piece of text with its position. y grows downward from the top of the page. */
+export interface PositionedItem {
+  page: number;
+  str: string;
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+}
+
+async function loadPdfjs() {
   const pdfjs = await import('pdfjs-dist/legacy/build/pdf.mjs');
   if (typeof window !== 'undefined' && !pdfjs.GlobalWorkerOptions.workerSrc) {
     // copied into public/ by scripts/copy-pdf-worker.mjs
     pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs';
   }
+  return pdfjs;
+}
+
+/** Every text item with page position, for layout-based parsers (ASSIST). */
+export async function extractPdfItems(data: Uint8Array): Promise<PositionedItem[]> {
+  const pdfjs = await loadPdfjs();
+  const task = pdfjs.getDocument({ data, verbosity: 0 });
+  const doc = await task.promise;
+  const out: PositionedItem[] = [];
+  for (let p = 1; p <= doc.numPages; p++) {
+    const page = await doc.getPage(p);
+    const { height: pageHeight } = page.getViewport({ scale: 1 });
+    const content = await page.getTextContent();
+    for (const raw of content.items) {
+      if (!('str' in raw) || !raw.str.trim()) continue;
+      out.push({
+        page: p,
+        str: raw.str.trim(),
+        x: Math.round(raw.transform[4] * 10) / 10,
+        y: Math.round((pageHeight - raw.transform[5]) * 10) / 10,
+        width: Math.round(raw.width * 10) / 10,
+        height: Math.round(raw.height * 10) / 10,
+      });
+    }
+  }
+  await task.destroy();
+  return out;
+}
+
+/** Extract every page's lines. Works in Node and modern browsers. */
+export async function extractPdfLines(data: Uint8Array): Promise<string[]> {
+  const pdfjs = await loadPdfjs();
   // verbosity 0: font warnings don't matter, we only read text
   const task = pdfjs.getDocument({ data, verbosity: 0 });
   const doc = await task.promise;

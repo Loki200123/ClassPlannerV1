@@ -42,6 +42,8 @@ export interface PlanResult {
   blocked: string[];
   /** Notes to show the student (US 1–3, PE, grade rules...). */
   flags: string[];
+  /** Recommended-but-not-required transfer courses still open (e.g. "additional lower division courses"). */
+  recommendedOnly?: string[];
 }
 
 // ---------- building needs ----------
@@ -87,13 +89,49 @@ function doneCodes(audit: AuditSnapshot | Omit<AuditSnapshot, 'id' | 'userId'>):
   );
 }
 
+/** "University of California, Los Angeles" -> "UCLA", "San Jose State University" -> "SJSU" */
+export function shortSchool(name: string): string {
+  const uc = name.match(/^University of California,\s*(.+)$/i);
+  if (uc) {
+    const city = uc[1].trim();
+    const known: Record<string, string> = {
+      'Los Angeles': 'UCLA', 'San Diego': 'UCSD', 'Berkeley': 'UC Berkeley', 'Davis': 'UC Davis', 'Irvine': 'UCI',
+      'Santa Barbara': 'UCSB', 'Santa Cruz': 'UCSC', 'Riverside': 'UCR', 'Merced': 'UC Merced',
+    };
+    return known[city] ?? `UC ${city}`;
+  }
+  const known: Record<string, string> = {
+    'San Jose State University': 'SJSU', 'San Francisco State University': 'SFSU', 'San Diego State University': 'SDSU',
+  };
+  return known[name] ?? name.replace(/^California State University,\s*/i, 'CSU ');
+}
+
+/** Short major name: "Engineering - Computer Engineering, B.S." -> "Computer Engineering" */
+export function shortMajor(major: string): string {
+  return major
+    .replace(/,?\s*(B\.?S\.?|B\.?A\.?|B\.?F\.?A\.?)\s*$/i, '')
+    .replace(/\/\s*$/, '')
+    .replace(/^Engineering - /i, '')
+    .replace(/^[A-Z]{2,5}:\s*/, '')
+    .trim();
+}
+
+/** Name used in requirement labels; adds the major only when it's needed to tell agreements apart. */
+export function targetName(a: TransferAgreement, all: TransferAgreement[]): string {
+  const school = shortSchool(a.toInstitution);
+  const sameSchool = all.filter((o) => o.toInstitution === a.toInstitution).length > 1;
+  return sameSchool ? `${school} ${shortMajor(a.major)}` : school;
+}
+
 export function buildNeeds(
   audit: Omit<AuditSnapshot, 'id' | 'userId'>,
-  agreement?: TransferAgreement,
-): { needs: Need[]; taken: Set<CourseCode>; blocked: string[] } {
+  agreementOrList?: TransferAgreement | TransferAgreement[],
+): { needs: Need[]; taken: Set<CourseCode>; blocked: string[]; recommendedOnly: { label: string; bundles: Bundle[] }[] } {
+  const agreements = agreementOrList ? (Array.isArray(agreementOrList) ? agreementOrList : [agreementOrList]) : [];
   const taken = doneCodes(audit);
   const needs: Need[] = [];
   const blocked: string[] = [];
+  const recommendedOnly: { label: string; bundles: Bundle[] }[] = [];
 
   // DegreeWorks: every "Still needed: N Class in ..." list
   audit.requirements.forEach((r, i) => {
@@ -110,22 +148,32 @@ export function buildNeeds(
   });
 
   // ASSIST: one need per articulation in "all" groups, one need per group otherwise
-  if (agreement) {
-    const school = agreement.toInstitution;
+  agreements.forEach((agreement, ag) => {
+    const school = agreements.length > 1 ? targetName(agreement, agreements) : agreement.toInstitution;
     agreement.groups.forEach((g, gi) => {
       const items = g.articulations.map((a) => ({
         a,
         item: { weight: g.rule.kind === 'units' ? a.receiving.units.value : 1, bundles: alternatives(a.sending, taken) },
       }));
+      const describe = (a: (typeof items)[number]['a']) =>
+        a.receiving.title ? `${school} ${a.receiving.code} (${a.receiving.title})` : `${school}: ${a.receiving.code}`;
+      if (g.optional) {
+        for (const { a, item } of items) {
+          if (item.bundles.length > 0 && !item.bundles.some((b) => b.length === 0)) {
+            recommendedOnly.push({ label: describe(a), bundles: item.bundles });
+          }
+        }
+        return;
+      }
       if (g.rule.kind === 'all') {
         items.forEach(({ a, item }, ai) => {
-          const label = `${school} ${a.receiving.code} (${a.receiving.title})`;
+          const label = describe(a);
           if (item.bundles.length === 0) blocked.push(label);
-          else needs.push({ id: `as-${gi}-${ai}`, label, source: 'assist', required: 1, items: [item] });
+          else needs.push({ id: `as${ag}-${gi}-${ai}`, label, source: 'assist', required: 1, items: [item] });
         });
       } else {
         needs.push({
-          id: `as-${gi}`,
+          id: `as${ag}-${gi}`,
           label: `${school} ${g.title}`,
           source: 'assist',
           required: g.rule.kind === 'count' ? g.rule.n : g.rule.min,
@@ -133,8 +181,8 @@ export function buildNeeds(
         });
       }
     });
-  }
-  return { needs, taken, blocked };
+  });
+  return { needs, taken, blocked, recommendedOnly };
 }
 
 // ---------- choosing courses ----------
@@ -267,8 +315,19 @@ export function planCourses(
   return { recommended, choices, blocked, flags };
 }
 
-/** One call for the UI: audit (+ optional transfer agreement) -> plan. */
-export function plan(audit: Omit<AuditSnapshot, 'id' | 'userId'>, agreement?: TransferAgreement): PlanResult {
-  const { needs, taken, blocked } = buildNeeds(audit, agreement);
-  return planCourses(needs, taken, blocked, agreement?.notes ?? []);
+/** One call for the UI: audit (+ one or more transfer agreements) -> plan. */
+export function plan(
+  audit: Omit<AuditSnapshot, 'id' | 'userId'>,
+  agreements?: TransferAgreement | TransferAgreement[],
+): PlanResult {
+  const list = agreements ? (Array.isArray(agreements) ? agreements : [agreements]) : [];
+  const { needs, taken, blocked, recommendedOnly } = buildNeeds(audit, list);
+  const flags = [...new Set(list.flatMap((a) => a.notes))];
+  const result = planCourses(needs, taken, blocked, flags);
+  // optional transfer courses the plan doesn't already cover
+  const covered = new Set([...taken, ...result.recommended.map((c) => c.code)]);
+  const open = recommendedOnly
+    .filter((r) => !r.bundles.some((b) => b.every((c) => covered.has(c))))
+    .map((r) => `${r.label}: ${r.bundles.map((b) => b.join(' + ')).join(' or ')}`);
+  return { ...result, recommendedOnly: open };
 }

@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import type { ParsedAudit } from '../adapters/fhda/degreeworks';
-import type { OpenChoice, PlanResult } from '../planner/plan';
+import { shortSchool, type OpenChoice, type PlanResult } from '../planner/plan';
+import { UNIVERSITIES } from '../data/universities';
 
 /** "AREA 3 - ARTS AND HUMANITIES — Arts & Humanities" -> "Arts & Humanities (GE Area 3)" */
 export function friendlyLabel(label: string): string {
@@ -10,10 +11,14 @@ export function friendlyLabel(label: string): string {
   if (ge) return `${ge[2]} (GE Area ${ge[1]})`;
   const adt = label.match(/^(.+?) for Transfer — (.+)$/);
   if (adt) return `${adt[2]} (${adt[1]} ADT)`;
-  return label.replace(/^San Jose State University /, 'SJSU ');
+  for (const u of UNIVERSITIES) {
+    if (label.startsWith(u.name + ' ')) return shortSchool(u.name) + label.slice(u.name.length);
+  }
+  return label;
 }
 
-function auditNotes(audit: ParsedAudit): string[] {
+function auditNotes(audit: ParsedAudit | null): string[] {
+  if (!audit) return [];
   const out: string[] = [];
   for (const r of audit.requirements) {
     if (r.label !== r.block || r.status === 'complete') continue;
@@ -48,7 +53,7 @@ function Choice({ choice }: { choice: OpenChoice }) {
   );
 }
 
-export function PlanView({ plan, audit }: { plan: PlanResult; audit: ParsedAudit }) {
+export function PlanView({ plan, audit }: { plan: PlanResult; audit: ParsedAudit | null }) {
   const notes = [...auditNotes(audit), ...plan.flags];
   const totalCounts = plan.recommended.reduce((n, c) => n + c.countsFor.length, 0);
 
@@ -93,10 +98,24 @@ export function PlanView({ plan, audit }: { plan: PlanResult; audit: ParsedAudit
 
       {plan.blocked.length > 0 && (
         <section aria-labelledby="blocked-h" className="blocked">
-          <h3 id="blocked-h">Not offered at your college</h3>
+          <h3 id="blocked-h">
+            Not offered at your college
+            <span className="plan-sub">Take these after you transfer, or ask a counselor about another college.</span>
+          </h3>
           <ul>
             {plan.blocked.map((b) => (
-              <li key={b}>{friendlyLabel(b)}: take it after you transfer, or ask a counselor about another college.</li>
+              <li key={b}>{friendlyLabel(b)}</li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {(plan.recommendedOnly?.length ?? 0) > 0 && (
+        <section aria-labelledby="extra-h">
+          <h3 id="extra-h">Recommended, not required</h3>
+          <ul className="notes">
+            {plan.recommendedOnly!.map((n) => (
+              <li key={n}>{friendlyLabel(n)}</li>
             ))}
           </ul>
         </section>

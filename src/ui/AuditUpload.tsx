@@ -3,13 +3,17 @@
 import { useRef, useState } from 'react';
 import { NotAnAuditError, parseFhdaDegreeWorks, type ParsedAudit } from '../adapters/fhda/degreeworks';
 import { extractPdfLines } from '../pdf/pdf-text';
+import type { CollegeInfo } from '../data/colleges';
 
 interface Props {
+  college: CollegeInfo;
   audit: ParsedAudit | null;
+  skipped: boolean;
   onParsed: (audit: ParsedAudit | null) => void;
+  onSkip: (skip: boolean) => void;
 }
 
-export function AuditUpload({ audit, onParsed }: Props) {
+export function AuditUpload({ college, audit, skipped, onParsed, onSkip }: Props) {
   const input = useRef<HTMLInputElement>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -28,13 +32,41 @@ export function AuditUpload({ audit, onParsed }: Props) {
     } catch (e) {
       setError(
         e instanceof NotAnAuditError
-          ? 'This PDF isn’t a Foothill–De Anza DegreeWorks audit. Download the audit from MyPortal → DegreeWorks and try again.'
+          ? 'This PDF isn’t a De Anza DegreeWorks audit. Download it from MyPortal → DegreeWorks and try again.'
           : 'Couldn’t read that PDF. Try downloading it from DegreeWorks again.',
       );
     } finally {
       setBusy(false);
       if (input.current) input.current.value = '';
     }
+  }
+
+  if (skipped && !audit) {
+    return (
+      <div>
+        <p>
+          No audit. Your plan will list everything your transfer agreements require, without checking what you’ve
+          already taken.
+        </p>
+        <button type="button" className="link-btn" onClick={() => onSkip(false)}>
+          Add an audit after all
+        </button>
+      </div>
+    );
+  }
+
+  if (!college.auditSupported) {
+    return (
+      <div>
+        <p>
+          We can’t read {college.name} DegreeWorks audits yet. Support is being added. For now you can still see
+          what your transfer agreements require.
+        </p>
+        <button type="button" className="btn" onClick={() => onSkip(true)}>
+          Continue without an audit
+        </button>
+      </div>
+    );
   }
 
   if (audit) {
@@ -107,6 +139,9 @@ export function AuditUpload({ audit, onParsed }: Props) {
         The PDF is read on this device and never uploaded. Only your course list is kept; your name, student ID and
         GPA are dropped.
       </p>
+      <button type="button" className="link-btn quiet" onClick={() => onSkip(true)}>
+        Continue without an audit
+      </button>
     </div>
   );
 }

@@ -1,7 +1,12 @@
 'use client';
 
 import { useRef, useState } from 'react';
-import { NotAnAuditError, parseFhdaDegreeWorks, type ParsedAudit } from '../adapters/fhda/degreeworks';
+import {
+  NotAnAuditError,
+  WrongCollegeAuditError,
+  parseDegreeWorks,
+  type ParsedAudit,
+} from '../adapters/degreeworks';
 import { extractPdfLines } from '../pdf/pdf-text';
 import type { CollegeInfo } from '../data/colleges';
 
@@ -28,12 +33,14 @@ export function AuditUpload({ college, audit, skipped, onParsed, onSkip }: Props
     setBusy(true);
     try {
       const lines = await extractPdfLines(new Uint8Array(await file.arrayBuffer()));
-      onParsed(parseFhdaDegreeWorks(lines.join('\n')));
+      onParsed(parseDegreeWorks(lines.join('\n'), college.districtId));
     } catch (e) {
       setError(
-        e instanceof NotAnAuditError
-          ? 'This PDF isn’t a De Anza DegreeWorks audit. Download it from MyPortal → DegreeWorks and try again.'
-          : 'Couldn’t read that PDF. Try downloading it from DegreeWorks again.',
+        e instanceof WrongCollegeAuditError
+          ? `${e.message} Change the college in step 1, or upload your ${college.name} audit.`
+          : e instanceof NotAnAuditError
+            ? `This PDF isn’t a ${college.name} DegreeWorks audit. Download it from DegreeWorks and try again.`
+            : 'Couldn’t read that PDF. Try downloading it from DegreeWorks again.',
       );
     } finally {
       setBusy(false);

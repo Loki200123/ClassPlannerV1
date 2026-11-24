@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import type { ParsedAudit } from '../adapters/fhda/degreeworks';
+import type { ParsedAudit } from '../adapters/degreeworks';
 import { shortSchool, type OpenChoice, type PlanResult } from '../planner/plan';
 import { UNIVERSITIES } from '../data/universities';
 
@@ -9,11 +9,19 @@ import { UNIVERSITIES } from '../data/universities';
 export function friendlyLabel(label: string): string {
   const ge = label.match(/^AREA (\d+) - .+? — (.+)$/);
   if (ge) return `${ge[2]} (GE Area ${ge[1]})`;
+  // CCSF: "AREA 1: English Communication — Area 1B: Oral Communication..." / "AREA 4: Social and Behavioral Sciences"
+  const sub = label.match(/^AREA \d+: .+? — Area (\d+[A-Z]?): (.+)$/);
+  if (sub) return `${sub[2]} (GE Area ${sub[1]})`;
+  const area = label.match(/^AREA (\d+): (.+)$/);
+  if (area && !area[2].includes(' — ')) return `${area[2]} (GE Area ${area[1]})`;
   const adt = label.match(/^(.+?) for Transfer — (.+)$/);
   if (adt) return `${adt[2]} (${adt[1]} ADT)`;
   for (const u of UNIVERSITIES) {
     if (label.startsWith(u.name + ' ')) return shortSchool(u.name) + label.slice(u.name.length);
   }
+  // "Engineering, AS — Calculus I" -> "Calculus I (Engineering, AS)"
+  const major = label.match(/^([^—]+?) — (.+)$/);
+  if (major) return `${major[2]} (${major[1]})`;
   return label;
 }
 
@@ -21,7 +29,8 @@ function auditNotes(audit: ParsedAudit | null): string[] {
   if (!audit) return [];
   const out: string[] = [];
   for (const r of audit.requirements) {
-    if (r.label !== r.block || r.status === 'complete') continue;
+    // only block summaries ("47 more units"); requirements with a class list are shown as classes/choices
+    if (r.label !== r.block || r.status === 'complete' || r.options.length > 0) continue;
     const name = r.block.replace(/^AREA (\d+) - (.+)$/, (_, n, rest) => `GE Area ${n} (${rest.toLowerCase()})`);
     if (r.unitsNeeded) out.push(`${name}: ${r.unitsNeeded} more units.`);
     if (r.notes) out.push(`${name}: ${r.notes}`);

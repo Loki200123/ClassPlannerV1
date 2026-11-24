@@ -15,7 +15,7 @@ export const COLLEGES: CollegeInfo[] = [
   { id: 'deanza', name: 'De Anza College', districtId: 'fhda', termSystem: 'quarter', auditSupported: true, assistName: 'De Anza College' },
   { id: 'skyline', name: 'Skyline College', districtId: 'smccd', termSystem: 'semester', auditSupported: false, assistName: 'Skyline College' },
   { id: 'csm', name: 'College of San Mateo', districtId: 'smccd', termSystem: 'semester', auditSupported: false, assistName: 'College of San Mateo' },
-  { id: 'ccsf', name: 'City College of San Francisco', districtId: 'ccsf', termSystem: 'semester', auditSupported: false, assistName: 'City College of San Francisco' },
+  { id: 'ccsf', name: 'City College of San Francisco', districtId: 'ccsf', termSystem: 'semester', auditSupported: true, assistName: 'City College of San Francisco' },
 ];
 
 export const collegeById = (id: string) => COLLEGES.find((c) => c.id === id) ?? COLLEGES[0];

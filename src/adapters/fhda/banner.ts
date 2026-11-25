@@ -97,7 +97,8 @@ function seatStatus(s: BannerSection): SeatStatus {
 
 /** One Banner section -> our Section. Returns null for codes we can't read. */
 export function normalizeBannerSection(s: BannerSection, termId: string, now: string): Section | null {
-  const code = normalizeFhdaCode(`${s.subject} ${s.courseNumber}`);
+  // subject passed separately: some have spaces ("C D" = Child Development)
+  const code = normalizeFhdaCode(s.courseNumber, s.subject);
   if (!code) return null;
   const known = METHOD[s.instructionalMethod ?? ''];
 

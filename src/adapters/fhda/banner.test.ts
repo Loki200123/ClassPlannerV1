@@ -15,6 +15,8 @@ test('codes match DegreeWorks/ASSIST format', () => {
   assert.equal(byCrn('40281').courseCode, 'MATH 1DH');
   assert.equal(byCrn('40247').courseCode, 'CIS 21JA');
   assert.equal(byCrn('40241').courseCode, 'CIS 22C');
+  const cd = normalizeBannerSection({ ...raw[0], subject: 'C D', courseNumber: 'D010G' }, 't', 'n');
+  assert.equal(cd?.courseCode, 'C D 10G'); // subject with a space
 });
 
 test('meetings, units, seats, instructor', () => {

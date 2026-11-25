@@ -11,20 +11,29 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Probe registration servers
+      - name: Fetch sample sections (Banner 9)
         run: |
           mkdir -p out && cd out
+          B="https://reg.oci.fhda.edu/StudentRegistrationSsb/ssb"
           UA="ClassPlannerV1 (student project; github.com/Loki200123/ClassPlannerV1)"
-          probe() {
-            echo "== $1" >> summary.txt
-            curl -sSL -A "$UA" -m 30 -c cookies.txt -b cookies.txt -D "$2.headers" -o "$2" -w "status %{http_code} type %{content_type} final %{url_effective}\n" "$1" >> summary.txt 2>&1 || echo "FAILED" >> summary.txt
-            head -c 600 "$2" | tr '\n' ' ' >> summary.txt; echo >> summary.txt
+          SID="cp$(date +%s)"
+          c() { curl -sS -A "$UA" -m 60 -c jar.txt -b jar.txt "$@"; }
+          # 1) choose the term for this session (same request the class search page makes)
+          c -o term.json -w "term-select %{http_code}\n" -X POST "$B/term/search?mode=search" \
+            --data "term=202732&studyPath=&studyPathText=&startDatepicker=&endDatepicker=&uniqueSessionId=$SID" >> summary.txt
+          sleep 2
+          for SUBJ in MATH CIS; do
+            c -o "w2027-$SUBJ.json" -w "$SUBJ %{http_code} %{size_download}b\n" \
+              "$B/searchResults/searchResults?txt_subject=$SUBJ&txt_term=202732&pageOffset=0&pageMaxSize=500&sortColumn=subjectDescription&sortDirection=asc&uniqueSessionId=$SID" >> summary.txt
             sleep 2
-          }
-          probe "https://banssb.fhda.edu/PROD/fhda_opencourses.P_Application" banner8.html
-          probe "https://reg.oci.fhda.edu/StudentRegistrationSsb/ssb/classSearch/getTerms?searchTerm=&offset=1&max=10" b9-oci-terms.json
-          probe "https://ssb-prod.ec.fhda.edu/StudentRegistrationSsb/ssb/classSearch/getTerms?searchTerm=&offset=1&max=10" b9-ec-terms.json
-          probe "https://www.deanza.edu/schedule/" deanza.html
+            c -o /dev/null -X POST "$B/classSearch/resetDataForm" --data "uniqueSessionId=$SID"
+            sleep 2
+          done
+          # whole term without a subject filter: how many sections, and does paging work?
+          c -o "w2027-all-p0.json" -w "ALL %{http_code} %{size_download}b\n" \
+            "$B/searchResults/searchResults?txt_term=202732&pageOffset=0&pageMaxSize=500&sortColumn=subjectDescription&sortDirection=asc&uniqueSessionId=$SID" >> summary.txt
+          rm -f jar.txt
+          for f in *.json; do printf "%s " "$f" >> summary.txt; python3 -c "import json,sys; d=json.load(open('$f')); print('success=',d.get('success'),'total=',d.get('totalCount'),'rows=',len(d.get('data') or []))" >> summary.txt 2>&1 || echo "not json" >> summary.txt; done
           cat summary.txt
       - name: Commit results to schedule-probe-results
         run: |

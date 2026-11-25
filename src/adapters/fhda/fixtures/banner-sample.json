@@ -1,0 +1,1908 @@
+[
+ {
+  "term": "202732",
+  "courseReferenceNumber": "39968",
+  "subject": "MATH",
+  "courseNumber": "D001D",
+  "courseTitle": "Calculus IV",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "IP",
+  "instructionalMethodDescription": "In-person",
+  "maximumEnrollment": 40,
+  "enrollment": 40,
+  "seatsAvailable": 0,
+  "waitCapacity": 6,
+  "waitCount": 6,
+  "waitAvailable": 0,
+  "faculty": [
+   {
+    "displayName": "Sega, Lucian",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": "1600",
+     "endTime": "1815",
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": true,
+     "tuesday": false,
+     "wednesday": true,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DA",
+     "room": "E31",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "38475",
+  "subject": "MATH",
+  "courseNumber": "D001D",
+  "courseTitle": "Calculus IV",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "IP",
+  "instructionalMethodDescription": "In-person",
+  "maximumEnrollment": 40,
+  "enrollment": 40,
+  "seatsAvailable": 0,
+  "waitCapacity": 6,
+  "waitCount": 6,
+  "waitAvailable": 0,
+  "faculty": [
+   {
+    "displayName": "Mailhot, James",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": "1100",
+     "endTime": "1315",
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": true,
+     "wednesday": false,
+     "thursday": true,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DA",
+     "room": "MLC108",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "38470",
+  "subject": "MATH",
+  "courseNumber": "D001D",
+  "courseTitle": "Calculus IV",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "IP",
+  "instructionalMethodDescription": "In-person",
+  "maximumEnrollment": 40,
+  "enrollment": 24,
+  "seatsAvailable": 16,
+  "waitCapacity": 6,
+  "waitCount": 0,
+  "waitAvailable": 6,
+  "faculty": [
+   {
+    "displayName": "Shi, Kejian",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": "1330",
+     "endTime": "1545",
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": true,
+     "wednesday": false,
+     "thursday": true,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DA",
+     "room": "MLC103",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "38472",
+  "subject": "MATH",
+  "courseNumber": "D001D",
+  "courseTitle": "Calculus IV",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "IP",
+  "instructionalMethodDescription": "In-person",
+  "maximumEnrollment": 40,
+  "enrollment": 40,
+  "seatsAvailable": 0,
+  "waitCapacity": 6,
+  "waitCount": 6,
+  "waitAvailable": 0,
+  "faculty": [
+   {
+    "displayName": "Ison, Millia",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": "1600",
+     "endTime": "1815",
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": true,
+     "tuesday": false,
+     "wednesday": true,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DA",
+     "room": "S46",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "38473",
+  "subject": "MATH",
+  "courseNumber": "D001D",
+  "courseTitle": "Calculus IV",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "IP",
+  "instructionalMethodDescription": "In-person",
+  "maximumEnrollment": 40,
+  "enrollment": 11,
+  "seatsAvailable": 29,
+  "waitCapacity": 6,
+  "waitCount": 0,
+  "waitAvailable": 6,
+  "faculty": [
+   {
+    "displayName": "Bourgoub, Hassan",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": "1600",
+     "endTime": "1815",
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": true,
+     "wednesday": false,
+     "thursday": true,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DA",
+     "room": "S45",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "40253",
+  "subject": "MATH",
+  "courseNumber": "D001D",
+  "courseTitle": "Calculus IV",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "OA",
+  "instructionalMethodDescription": "Fully Online asynchronous",
+  "maximumEnrollment": 25,
+  "enrollment": 0,
+  "seatsAvailable": 25,
+  "waitCapacity": 0,
+  "waitCount": 0,
+  "waitAvailable": 0,
+  "faculty": [
+   {
+    "displayName": "Zhang, Linlin",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "40254",
+  "subject": "MATH",
+  "courseNumber": "D001D",
+  "courseTitle": "Calculus IV",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "O2",
+  "instructionalMethodDescription": "ONLINE in person exams",
+  "maximumEnrollment": 15,
+  "enrollment": 15,
+  "seatsAvailable": 0,
+  "waitCapacity": 6,
+  "waitCount": 6,
+  "waitAvailable": 0,
+  "faculty": [
+   {
+    "displayName": "Zhang, Linlin",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "38477",
+  "subject": "MATH",
+  "courseNumber": "D001D",
+  "courseTitle": "Calculus IV",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "O2",
+  "instructionalMethodDescription": "ONLINE in person exams",
+  "maximumEnrollment": 40,
+  "enrollment": 40,
+  "seatsAvailable": 0,
+  "waitCapacity": 6,
+  "waitCount": 2,
+  "waitAvailable": 4,
+  "faculty": [
+   {
+    "displayName": "Bourgoub, Hassan",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "39323",
+  "subject": "MATH",
+  "courseNumber": "D001D",
+  "courseTitle": "Calculus IV",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "O2",
+  "instructionalMethodDescription": "ONLINE in person exams",
+  "maximumEnrollment": 40,
+  "enrollment": 40,
+  "seatsAvailable": 0,
+  "waitCapacity": 6,
+  "waitCount": 6,
+  "waitAvailable": 0,
+  "faculty": [
+   {
+    "displayName": "Ison, Millia",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "38474",
+  "subject": "MATH",
+  "courseNumber": "D001D",
+  "courseTitle": "Calculus IV",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "IP",
+  "instructionalMethodDescription": "In-person",
+  "maximumEnrollment": 40,
+  "enrollment": 40,
+  "seatsAvailable": 0,
+  "waitCapacity": 6,
+  "waitCount": 0,
+  "waitAvailable": 6,
+  "faculty": [
+   {
+    "displayName": "Du, Paul",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": "1830",
+     "endTime": "2045",
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": true,
+     "tuesday": false,
+     "wednesday": true,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DA",
+     "room": "MLC113",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "39970",
+  "subject": "MATH",
+  "courseNumber": "D001D",
+  "courseTitle": "Calculus IV",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "IP",
+  "instructionalMethodDescription": "In-person",
+  "maximumEnrollment": 40,
+  "enrollment": 11,
+  "seatsAvailable": 29,
+  "waitCapacity": 6,
+  "waitCount": 0,
+  "waitAvailable": 6,
+  "faculty": [
+   {
+    "displayName": "Nguyen, Ducq",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": "1830",
+     "endTime": "2045",
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": true,
+     "wednesday": false,
+     "thursday": true,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DA",
+     "room": "E33",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "38483",
+  "subject": "MATH",
+  "courseNumber": "D002B",
+  "courseTitle": "Linear Algebra",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "IP",
+  "instructionalMethodDescription": "In-person",
+  "maximumEnrollment": 40,
+  "enrollment": 40,
+  "seatsAvailable": 0,
+  "waitCapacity": 6,
+  "waitCount": 6,
+  "waitAvailable": 0,
+  "faculty": [
+   {
+    "displayName": "Mailhot, James",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": "1100",
+     "endTime": "1315",
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": true,
+     "tuesday": false,
+     "wednesday": true,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DA",
+     "room": "S57",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "38899",
+  "subject": "MATH",
+  "courseNumber": "D002B",
+  "courseTitle": "Linear Algebra",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "IP",
+  "instructionalMethodDescription": "In-person",
+  "maximumEnrollment": 40,
+  "enrollment": 40,
+  "seatsAvailable": 0,
+  "waitCapacity": 6,
+  "waitCount": 6,
+  "waitAvailable": 0,
+  "faculty": [
+   {
+    "displayName": "Taylor, Roderic",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": "1600",
+     "endTime": "1815",
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": true,
+     "tuesday": false,
+     "wednesday": true,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DA",
+     "room": "LCW16",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "39308",
+  "subject": "MATH",
+  "courseNumber": "D002B",
+  "courseTitle": "Linear Algebra",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "O2",
+  "instructionalMethodDescription": "ONLINE in person exams",
+  "maximumEnrollment": 40,
+  "enrollment": 40,
+  "seatsAvailable": 0,
+  "waitCapacity": 6,
+  "waitCount": 6,
+  "waitAvailable": 0,
+  "faculty": [
+   {
+    "displayName": "Yarahmadi, Fatemeh",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "To be Arranged"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "38484",
+  "subject": "MATH",
+  "courseNumber": "D002B",
+  "courseTitle": "Linear Algebra",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "IP",
+  "instructionalMethodDescription": "In-person",
+  "maximumEnrollment": 40,
+  "enrollment": 40,
+  "seatsAvailable": 0,
+  "waitCapacity": 6,
+  "waitCount": 6,
+  "waitAvailable": 0,
+  "faculty": [
+   {
+    "displayName": "Sega, Lucian",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": "1830",
+     "endTime": "2045",
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": true,
+     "wednesday": false,
+     "thursday": true,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DA",
+     "room": "MLC108",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "38917",
+  "subject": "MATH",
+  "courseNumber": "D002B",
+  "courseTitle": "Linear Algebra",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "IP",
+  "instructionalMethodDescription": "In-person",
+  "maximumEnrollment": 40,
+  "enrollment": 40,
+  "seatsAvailable": 0,
+  "waitCapacity": 6,
+  "waitCount": 6,
+  "waitAvailable": 0,
+  "faculty": [
+   {
+    "displayName": "Kotas, Jakob",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": "1830",
+     "endTime": "2045",
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": true,
+     "tuesday": false,
+     "wednesday": true,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DA",
+     "room": "MLC109",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "40281",
+  "subject": "MATH",
+  "courseNumber": "D01DH",
+  "courseTitle": "Calculus IV - HONORS",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "IP",
+  "instructionalMethodDescription": "In-person",
+  "maximumEnrollment": 0,
+  "enrollment": 0,
+  "seatsAvailable": 0,
+  "waitCapacity": 0,
+  "waitCount": 0,
+  "waitAvailable": 0,
+  "faculty": [
+   {
+    "displayName": "Mailhot, James",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": "1100",
+     "endTime": "1315",
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": true,
+     "wednesday": false,
+     "thursday": true,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DA",
+     "room": "MLC108",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "38518",
+  "subject": "MATH",
+  "courseNumber": "D022.",
+  "courseTitle": "Discrete Mathematics",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "HB",
+  "instructionalMethodDescription": "IN-PERSON some wkly online",
+  "maximumEnrollment": 40,
+  "enrollment": 1,
+  "seatsAvailable": 39,
+  "waitCapacity": 6,
+  "waitCount": 0,
+  "waitAvailable": 6,
+  "faculty": [
+   {
+    "displayName": "Shi, Kejian",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": "0830",
+     "endTime": "0920",
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": true,
+     "tuesday": true,
+     "wednesday": true,
+     "thursday": true,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DA",
+     "room": "S46",
+     "meetingTypeDescription": "Class"
+    }
+   },
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "To be Arranged"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "38519",
+  "subject": "MATH",
+  "courseNumber": "D022.",
+  "courseTitle": "Discrete Mathematics",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "IP",
+  "instructionalMethodDescription": "In-person",
+  "maximumEnrollment": 40,
+  "enrollment": 40,
+  "seatsAvailable": 0,
+  "waitCapacity": 6,
+  "waitCount": 1,
+  "waitAvailable": 5,
+  "faculty": [
+   {
+    "displayName": "Yarahmadi, Fatemeh",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": "1330",
+     "endTime": "1545",
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": true,
+     "wednesday": false,
+     "thursday": true,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DA",
+     "room": "MLC260",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "38520",
+  "subject": "MATH",
+  "courseNumber": "D022.",
+  "courseTitle": "Discrete Mathematics",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "IP",
+  "instructionalMethodDescription": "In-person",
+  "maximumEnrollment": 40,
+  "enrollment": 7,
+  "seatsAvailable": 33,
+  "waitCapacity": 6,
+  "waitCount": 0,
+  "waitAvailable": 6,
+  "faculty": [
+   {
+    "displayName": "Shariatmadari, Reza",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": "1600",
+     "endTime": "1815",
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": true,
+     "tuesday": false,
+     "wednesday": true,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DA",
+     "room": "MLC112",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "38895",
+  "subject": "MATH",
+  "courseNumber": "D022.",
+  "courseTitle": "Discrete Mathematics",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "O2",
+  "instructionalMethodDescription": "ONLINE in person exams",
+  "maximumEnrollment": 40,
+  "enrollment": 37,
+  "seatsAvailable": 3,
+  "waitCapacity": 6,
+  "waitCount": 0,
+  "waitAvailable": 6,
+  "faculty": [
+   {
+    "displayName": "Shi, Kejian",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "To be Arranged"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "40241",
+  "subject": "CIS",
+  "courseNumber": "D022C",
+  "courseTitle": "Data Abstraction and Structures",
+  "creditHourLow": 4.5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "HB",
+  "instructionalMethodDescription": "IN-PERSON some wkly online",
+  "maximumEnrollment": 40,
+  "enrollment": 14,
+  "seatsAvailable": 26,
+  "waitCapacity": 5,
+  "waitCount": 0,
+  "waitAvailable": 5,
+  "faculty": [
+   {
+    "displayName": "Abolghasemi, Mirsaeid",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": "1330",
+     "endTime": "1520",
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": true,
+     "wednesday": false,
+     "thursday": true,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DA",
+     "room": "AT205",
+     "meetingTypeDescription": "Class"
+    }
+   },
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "Lab"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "40258",
+  "subject": "CIS",
+  "courseNumber": "D022C",
+  "courseTitle": "Data Abstraction and Structures",
+  "creditHourLow": 4.5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "HB",
+  "instructionalMethodDescription": "IN-PERSON some wkly online",
+  "maximumEnrollment": 40,
+  "enrollment": 7,
+  "seatsAvailable": 33,
+  "waitCapacity": 5,
+  "waitCount": 0,
+  "waitAvailable": 5,
+  "faculty": [
+   {
+    "displayName": "Kleinman, Ronald",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": "1530",
+     "endTime": "1720",
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": true,
+     "wednesday": false,
+     "thursday": true,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DA",
+     "room": "AT311",
+     "meetingTypeDescription": "Class"
+    }
+   },
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "Lab"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "33571",
+  "subject": "CIS",
+  "courseNumber": "D022C",
+  "courseTitle": "Data Abstraction and Structures",
+  "creditHourLow": 4.5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "OA",
+  "instructionalMethodDescription": "Fully Online asynchronous",
+  "maximumEnrollment": 40,
+  "enrollment": 40,
+  "seatsAvailable": 0,
+  "waitCapacity": 5,
+  "waitCount": 5,
+  "waitAvailable": 0,
+  "faculty": [
+   {
+    "displayName": "Yu, Linyun",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "Class"
+    }
+   },
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "Lab"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "38591",
+  "subject": "CIS",
+  "courseNumber": "D022C",
+  "courseTitle": "Data Abstraction and Structures",
+  "creditHourLow": 4.5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "OA",
+  "instructionalMethodDescription": "Fully Online asynchronous",
+  "maximumEnrollment": 40,
+  "enrollment": 40,
+  "seatsAvailable": 0,
+  "waitCapacity": 5,
+  "waitCount": 5,
+  "waitAvailable": 0,
+  "faculty": [
+   {
+    "displayName": "Abolghasemi, Mirsaeid",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "Lab"
+    }
+   },
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "40247",
+  "subject": "CIS",
+  "courseNumber": "D21JA",
+  "courseTitle": "Introduction to x86 Processor Assembly Language and Computer Architecture",
+  "creditHourLow": 4.5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "HB",
+  "instructionalMethodDescription": "IN-PERSON some wkly online",
+  "maximumEnrollment": 40,
+  "enrollment": 11,
+  "seatsAvailable": 29,
+  "waitCapacity": 5,
+  "waitCount": 0,
+  "waitAvailable": 5,
+  "faculty": [
+   {
+    "displayName": "Nguyen, Clare",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": "1330",
+     "endTime": "1445",
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": true,
+     "wednesday": false,
+     "thursday": true,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DA",
+     "room": "AT205",
+     "meetingTypeDescription": "Class"
+    }
+   },
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "Lab"
+    }
+   },
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "To be Arranged"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "37242",
+  "subject": "CIS",
+  "courseNumber": "D21JA",
+  "courseTitle": "Introduction to x86 Processor Assembly Language and Computer Architecture",
+  "creditHourLow": 4.5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "OA",
+  "instructionalMethodDescription": "Fully Online asynchronous",
+  "maximumEnrollment": 40,
+  "enrollment": 40,
+  "seatsAvailable": 0,
+  "waitCapacity": 5,
+  "waitCount": 5,
+  "waitAvailable": 0,
+  "faculty": [
+   {
+    "displayName": "Lau, Yau",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "Class"
+    }
+   },
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "Lab"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "32261",
+  "subject": "CIS",
+  "courseNumber": "D21JA",
+  "courseTitle": "Introduction to x86 Processor Assembly Language and Computer Architecture",
+  "creditHourLow": 4.5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "OA",
+  "instructionalMethodDescription": "Fully Online asynchronous",
+  "maximumEnrollment": 40,
+  "enrollment": 32,
+  "seatsAvailable": 8,
+  "waitCapacity": 5,
+  "waitCount": 0,
+  "waitAvailable": 5,
+  "faculty": [
+   {
+    "displayName": "Eftekhari, Kamran",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "Class"
+    }
+   },
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "Lab"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "36723",
+  "subject": "CIS",
+  "courseNumber": "D21JA",
+  "courseTitle": "Introduction to x86 Processor Assembly Language and Computer Architecture",
+  "creditHourLow": 4.5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "OA",
+  "instructionalMethodDescription": "Fully Online asynchronous",
+  "maximumEnrollment": 40,
+  "enrollment": 3,
+  "seatsAvailable": 37,
+  "waitCapacity": 5,
+  "waitCount": 0,
+  "waitAvailable": 5,
+  "faculty": [
+   {
+    "displayName": "Eftekhari, Kamran",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "Lab"
+    }
+   },
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "38579",
+  "subject": "ACCT",
+  "courseNumber": "D001A",
+  "courseTitle": "Financial Accounting I",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "HB",
+  "instructionalMethodDescription": "IN-PERSON some wkly online",
+  "maximumEnrollment": 40,
+  "enrollment": 40,
+  "seatsAvailable": 0,
+  "waitCapacity": 5,
+  "waitCount": 5,
+  "waitAvailable": 0,
+  "faculty": [
+   {
+    "displayName": "Moussa, Yacoub",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": "0930",
+     "endTime": "1045",
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": true,
+     "wednesday": false,
+     "thursday": true,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DA",
+     "room": "L81",
+     "meetingTypeDescription": "Class"
+    }
+   },
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "To be Arranged"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "38109",
+  "subject": "ACCT",
+  "courseNumber": "D001A",
+  "courseTitle": "Financial Accounting I",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "OS",
+  "instructionalMethodDescription": "Fully Online synchronous",
+  "maximumEnrollment": 40,
+  "enrollment": 40,
+  "seatsAvailable": 0,
+  "waitCapacity": 5,
+  "waitCount": 1,
+  "waitAvailable": 4,
+  "faculty": [
+   {
+    "displayName": "Breen, Mia",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": "1730",
+     "endTime": "1945",
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": true,
+     "wednesday": false,
+     "thursday": true,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "39326",
+  "subject": "ACCT",
+  "courseNumber": "D001A",
+  "courseTitle": "Financial Accounting I",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "OA",
+  "instructionalMethodDescription": "Fully Online asynchronous",
+  "maximumEnrollment": 40,
+  "enrollment": 40,
+  "seatsAvailable": 0,
+  "waitCapacity": 5,
+  "waitCount": 5,
+  "waitAvailable": 0,
+  "faculty": [
+   {
+    "displayName": "Wong, Catherina",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "00022",
+  "subject": "ACCT",
+  "courseNumber": "D001B",
+  "courseTitle": "Financial Accounting II",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "OC",
+  "instructionalMethodDescription": "Fully Online synch and async",
+  "maximumEnrollment": 40,
+  "enrollment": 40,
+  "seatsAvailable": 0,
+  "waitCapacity": 5,
+  "waitCount": 5,
+  "waitAvailable": 0,
+  "faculty": [
+   {
+    "displayName": "Claire, Richard",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": "0930",
+     "endTime": "1120",
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": true,
+     "wednesday": false,
+     "thursday": true,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "Class"
+    }
+   },
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "To be Arranged"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "40177",
+  "subject": "ADMJ",
+  "courseNumber": "D054.",
+  "courseTitle": "Youth and the Law",
+  "creditHourLow": 4,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Off Campus",
+  "instructionalMethod": "IP",
+  "instructionalMethodDescription": "In-person",
+  "maximumEnrollment": 19,
+  "enrollment": 5,
+  "seatsAvailable": 14,
+  "waitCapacity": 5,
+  "waitCount": 0,
+  "waitAvailable": 5,
+  "faculty": [
+   {
+    "displayName": "Green, DuJuan",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": "1420",
+     "endTime": "1610",
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": true,
+     "wednesday": false,
+     "thursday": true,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DO",
+     "room": "HOMSTD",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "30930",
+  "subject": "BIOL",
+  "courseNumber": "D010.",
+  "courseTitle": "Introductory Biology",
+  "creditHourLow": 5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "O1",
+  "instructionalMethodDescription": "ONLINE some wkly in person",
+  "maximumEnrollment": 32,
+  "enrollment": 32,
+  "seatsAvailable": 0,
+  "waitCapacity": 5,
+  "waitCount": 5,
+  "waitAvailable": 0,
+  "faculty": [
+   {
+    "displayName": "Bram, Jason",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": "0930",
+     "endTime": "1220",
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": true,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DA",
+     "room": "S51",
+     "meetingTypeDescription": "Lab"
+    }
+   },
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "39577",
+  "subject": "ANTH",
+  "courseNumber": "D002.",
+  "courseTitle": "Cultural Anthropology",
+  "creditHourLow": 4,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "OA",
+  "instructionalMethodDescription": "Fully Online asynchronous",
+  "maximumEnrollment": 40,
+  "enrollment": 40,
+  "seatsAvailable": 0,
+  "waitCapacity": 2,
+  "waitCount": 2,
+  "waitAvailable": 0,
+  "faculty": [
+   {
+    "displayName": "Solomon, Daniel",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "02/15/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "36331",
+  "subject": "AUTO",
+  "courseNumber": "D060H",
+  "courseTitle": "Advanced Drivability and Onboard Diagnostics",
+  "creditHourLow": 4.5,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "IP",
+  "instructionalMethodDescription": "In-person",
+  "maximumEnrollment": 19,
+  "enrollment": 14,
+  "seatsAvailable": 5,
+  "waitCapacity": 5,
+  "waitCount": 0,
+  "waitAvailable": 5,
+  "faculty": [
+   {
+    "displayName": "Escalona, Gerilowie",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": "1800",
+     "endTime": "2215",
+     "startDate": "01/04/2027",
+     "endDate": "02/12/2027",
+     "monday": false,
+     "tuesday": true,
+     "wednesday": false,
+     "thursday": true,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DA",
+     "room": "E12F",
+     "meetingTypeDescription": "Class"
+    }
+   }
+  ]
+ },
+ {
+  "term": "202732",
+  "courseReferenceNumber": "36236",
+  "subject": "BIOL",
+  "courseNumber": "D077.",
+  "courseTitle": "Special Projects in Biology",
+  "creditHourLow": 1,
+  "creditHourHigh": null,
+  "campusDescription": "De Anza, Main Campus",
+  "instructionalMethod": "OA",
+  "instructionalMethodDescription": "Fully Online asynchronous",
+  "maximumEnrollment": 0,
+  "enrollment": 0,
+  "seatsAvailable": 0,
+  "waitCapacity": 0,
+  "waitCount": 0,
+  "waitAvailable": 0,
+  "faculty": [
+   {
+    "displayName": "Staff, M",
+    "primaryIndicator": true
+   }
+  ],
+  "meetingsFaculty": [
+   {
+    "meetingTime": {
+     "beginTime": null,
+     "endTime": null,
+     "startDate": "01/04/2027",
+     "endDate": "03/26/2027",
+     "monday": false,
+     "tuesday": false,
+     "wednesday": false,
+     "thursday": false,
+     "friday": false,
+     "saturday": false,
+     "sunday": false,
+     "building": "DW",
+     "room": "ONLINE",
+     "meetingTypeDescription": "To be Arranged"
+    }
+   }
+  ]
+ }
+]

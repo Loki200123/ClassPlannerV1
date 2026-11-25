@@ -1,0 +1,43 @@
+# Imports the upcoming De Anza class schedules from Banner every 3 days and saves them to the
+# `schedule-data` branch, which the website reads. If an import fails or comes back empty,
+# the run fails and GitHub emails the repo owner.
+name: import-schedule
+on:
+  schedule:
+    - cron: '23 10 */3 * *' # every 3 days at 10:23 UTC (2:23 am Pacific). Runs from the default branch.
+  workflow_dispatch:
+  push:
+    branches: [website, main]
+    paths:
+      - scripts/import-schedule.ts
+      - src/adapters/fhda/banner.ts
+      - .github/workflows/import-schedule.yml
+permissions:
+  contents: write
+concurrency:
+  group: import-schedule
+  cancel-in-progress: false
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Import De Anza terms
+        run: npx tsx scripts/import-schedule.ts schedule-out
+      - name: Save to the schedule-data branch
+        run: |
+          cd schedule-out
+          cat index.json
+          git init -q -b schedule-data
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add -A
+          git commit -qm "Schedule data $(date -u +%Y-%m-%dT%H:%MZ)"
+          # one commit only (force push), so old schedules don't pile up in the repo
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" schedule-data

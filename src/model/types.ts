@@ -89,6 +89,15 @@ export interface Section {
   };
   /** If a section disappears from the latest import, it was probably cancelled. */
   lastSeenAt: string;
+  title?: string;
+  units?: number;
+  /** How the college describes it, e.g. "IN-PERSON some wkly online". */
+  methodLabel?: string;
+  /** ISO dates; short-term sections run only part of the term. */
+  startDate?: string;
+  endDate?: string;
+  /** Has meetings with no set time ("To be arranged", online hours). */
+  hasUntimedParts?: boolean;
 }
 
 // ---------- Requirement trees (used by ASSIST + prerequisites) ----------

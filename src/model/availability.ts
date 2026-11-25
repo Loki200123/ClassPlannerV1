@@ -9,6 +9,8 @@ export const hm = (hours: number, minutes = 0): Minutes => hours * 60 + minutes;
  */
 export function sectionFits(section: Section, avail: Availability): boolean {
   if (section.modality === 'online_async') return avail.allowOnlineAsync;
+  // times not set yet: can't promise it fits
+  if (section.meetings.length === 0) return false;
   const buffer = section.modality === 'online_sync' ? 0 : avail.commuteBufferMinutes;
 
   return section.meetings.every((m) =>

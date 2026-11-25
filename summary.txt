@@ -1,0 +1,8 @@
+term-select 200
+MATH 200 452842b
+CIS 200 478191b
+ALL 200 2068700b
+term.json success= None total= None rows= 0
+w2027-CIS.json success= True total= 88 rows= 88
+w2027-MATH.json success= True total= 117 rows= 117
+w2027-all-p0.json success= True total= 1520 rows= 500

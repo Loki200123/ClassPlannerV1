@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-25T02:21:02.246Z",
+  "terms": [
+    {
+      "code": "202742",
+      "label": "Spring 2027",
+      "season": "spring",
+      "year": 2027,
+      "collegeId": "deanza",
+      "file": "deanza/202742.json",
+      "sections": 1439,
+      "fetchedAt": "2026-11-25T02:21:02.246Z"
+    },
+    {
+      "code": "202732",
+      "label": "Winter 2027",
+      "season": "winter",
+      "year": 2027,
+      "collegeId": "deanza",
+      "file": "deanza/202732.json",
+      "sections": 1520,
+      "fetchedAt": "2026-11-25T02:21:02.246Z"
+    }
+  ]
+}

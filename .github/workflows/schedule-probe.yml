@@ -1,0 +1,44 @@
+# Temporary: fetches De Anza's public schedule pages so the importer can be written against the real HTML.
+# Results are committed to the `schedule-probe-results` branch. Safe to delete afterwards.
+name: schedule-probe
+on:
+  push:
+    branches: [schedule-probe]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch schedule pages
+        run: |
+          set -x
+          mkdir -p out && cd out
+          UA="ClassPlannerV1 (student project; github.com/Loki200123/ClassPlannerV1)"
+          get() { curl -sSL -A "$UA" -m 30 -D "$2.headers" -o "$2" "$1" || echo "FAILED $1" >> errors.txt; sleep 2; }
+          get "https://www.deanza.edu/schedule/" index.html
+          # every distinct schedule link on the page
+          grep -oiE 'href="[^"]*"' index.html | sed -E 's/^href="//I; s/"$//' | sort -u > links.txt
+          # follow up to 12 links that look like listings / search / quick searches / data
+          grep -iE 'schedule|listing|search|dept|json|api' links.txt | grep -viE '\.(jpg|png|svg|css|ico)' | head -12 > follow.txt || true
+          n=0
+          while read -r href; do
+            n=$((n+1))
+            case "$href" in
+              http*) url="$href" ;;
+              /*) url="https://www.deanza.edu$href" ;;
+              *) url="https://www.deanza.edu/schedule/$href" ;;
+            esac
+            echo "$n $url" >> followed.txt
+            get "$url" "page-$n.html"
+          done < follow.txt
+          ls -la
+      - name: Commit results to schedule-probe-results
+        run: |
+          cd out
+          git init -q -b schedule-probe-results
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add -A && git commit -qm "Schedule probe results"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" schedule-probe-results

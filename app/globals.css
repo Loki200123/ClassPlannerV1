@@ -309,3 +309,32 @@ select, input[type='time'] {
 /* ---------- next term question ---------- */
 .ask p { margin: 0 0 12px; }
 .ask-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+
+/* ---------- sections that fit ---------- */
+.sections-view { margin-top: 28px; border-top: 1px solid var(--rule); padding-top: 24px; }
+.sections-top .views { margin: 4px 0 8px; }
+.sections-top p { margin: 0 0 16px; }
+.course-list { list-style: none; padding: 0; margin: 0 0 24px; display: grid; gap: 14px; }
+.course-sections { border: 1px solid var(--rule); border-radius: 12px; padding: 14px 16px; }
+.course-sections .course-head { gap: 10px; }
+.course-sections > p { margin: 6px 0 8px; }
+.sections { list-style: none; padding: 0; margin: 0 0 6px; display: grid; gap: 8px; }
+.section {
+  display: grid; gap: 4px 16px; align-items: start;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) auto;
+  padding: 10px 12px; border-radius: 8px; background: var(--paper);
+}
+.section-when { display: grid; gap: 2px; min-width: 0; }
+.section-prof { min-width: 0; }
+.section-prof a { color: var(--free); }
+.section-meta { display: grid; gap: 2px; justify-items: end; text-align: right; }
+.seat { font-weight: 700; font-size: 0.875rem; }
+.seat-open { color: var(--free); }
+.seat-wait { color: var(--ink-soft); }
+.seat-full { color: var(--warn); }
+.other-sections summary { cursor: pointer; color: var(--free); font-weight: 600; margin-bottom: 8px; }
+.choice-sections h4 { font-size: 1.05rem; margin: 0 0 10px; }
+@media (max-width: 640px) {
+  .section { grid-template-columns: minmax(0, 1fr); }
+  .section-meta { justify-items: start; text-align: left; grid-auto-flow: column; justify-content: start; gap: 12px; }
+}

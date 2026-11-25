@@ -8,6 +8,8 @@ import type { TransferAgreement } from '../src/model/types';
 import { AuditUpload } from '../src/ui/AuditUpload';
 import { AvailabilityEditor } from '../src/ui/AvailabilityEditor';
 import { PlanView } from '../src/ui/PlanView';
+import { SectionsView } from '../src/ui/SectionsView';
+import type { Availability } from '../src/model/types';
 import { TransferTargets } from '../src/ui/TransferTargets';
 import {
   EMPTY_STATE,
@@ -74,6 +76,22 @@ export default function Home() {
     const audit = state.audit ?? NO_AUDIT;
     return buildPlan(audit, state.goal === 'transfer' ? shown : []);
   }, [ready, state.audit, state.goal, shown]);
+
+  // sections are matched against the plan for every target, whichever one is being viewed above
+  const fullPlan = useMemo(() => {
+    if (!ready) return null;
+    return buildPlan(state.audit ?? NO_AUDIT, state.goal === 'transfer' ? agreements : []);
+  }, [ready, state.audit, state.goal, agreements]);
+  const availability = useMemo<Availability>(
+    () => ({
+      userId: 'local',
+      termId: term,
+      blocks: state.blocks,
+      commuteBufferMinutes: state.commuteBufferMinutes,
+      allowOnlineAsync: state.allowOnlineAsync,
+    }),
+    [term, state.blocks, state.commuteBufferMinutes, state.allowOnlineAsync],
+  );
 
   return (
     <div className="page">
@@ -237,13 +255,15 @@ export default function Home() {
                       })
                     }
                   />
-                  <div className="next-up">
-                    <strong>
-                      {term} class times for {college.name} aren’t loaded yet.
-                    </strong>{' '}
-                    Once they are, this is where you’ll see the sections of your classes that fit the free time above,
-                    with professors and open seats.
-                  </div>
+                  {fullPlan && (
+                    <SectionsView
+                      collegeId={college.id}
+                      collegeName={college.name}
+                      defaultTerm={term}
+                      plan={fullPlan}
+                      availability={availability}
+                    />
+                  )}
                 </>
               )}
             </div>
